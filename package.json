@@ -1,0 +1,40 @@
+{
+  "name": "confidential-contracts-template",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "hardhat clean && rimraf build contracts/build fhevmTemp",
+    "compile": "hardhat compile",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "lint:fix": "npm run lint:js:fix && npm run lint:sol:fix",
+    "lint:js": "prettier --loglevel warn '**/*.{js,ts}' --check && eslint .",
+    "lint:js:fix": "prettier --loglevel warn '**/*.{js,ts}' --write && eslint . --fix",
+    "lint:sol": "prettier --loglevel warn '{contracts,test}/**/*.sol' --check && solhint --config solhint.config.js '{contracts,test}/**/*.sol'",
+    "lint:sol:fix": "solhint --config solhint.config.js '{contracts,test}/**/*.sol' --fix; prettier --loglevel warn '{contracts,test}/**/*.sol' --write",
+    "prepare": "husky",
+    "postinstall": "rimraf fhevmTemp",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "coverage": "SOLIDITY_COVERAGE=true hardhat coverage"
+  },
+  "dependencies": {
+    "@openzeppelin/confidential-contracts": "^0.5.1"
+  },
+  "devDependencies": {
+    "hardhat": "^2.29.0",
+    "@fhevm/hardhat-plugin": "0.4.2",
+    "@fhevm/solidity": "0.11.1",
+    "hardhat-gas-reporter": "^2.1.0",
+    "solidity-coverage": "0.8.12",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.6",
+    "@nomicfoundation/hardhat-ethers": "^3.0.4",
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@zama-fhe/relayer-sdk": "0.4.1",
+    "chai": "^4.3.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^2.8.4",
+    "prettier-plugin-solidity": "^1.1.2",
+    "solhint": "^5.1.0",
+    "rimraf": "^4.1.2"
+  }
+}
