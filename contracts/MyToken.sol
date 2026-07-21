@@ -1,10 +1,10 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.27;
 
-import {ERC7984} from "@openzeppelin/confidential-contracts/token/ERC7984/ERC7984.sol";
-import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {ZamaEthereumConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
 import {FHE} from "@fhevm/solidity/lib/FHE.sol";
+import {ERC7984} from "@openzeppelin/confidential-contracts/token/ERC7984/ERC7984.sol";
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MyToken is ERC7984, Ownable, ZamaEthereumConfig {
     constructor(

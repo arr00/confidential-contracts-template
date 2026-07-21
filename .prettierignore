@@ -1,0 +1,17 @@
+# directories
+artifacts
+build
+cache
+coverage
+dist
+fhevmTemp
+node_modules
+types
+
+# files
+*.env
+*.log
+.DS_Store
+coverage.json
+package-lock.json
+README.md

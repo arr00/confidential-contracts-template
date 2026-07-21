@@ -20,7 +20,7 @@ const config = {
     enabled: !!process.env.REPORT_GAS,
     showMethodSig: true,
     includeBytecodeInJSON: true,
-  }
+  },
 };
 
 export default config;
