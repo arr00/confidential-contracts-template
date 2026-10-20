@@ -17,7 +17,7 @@
     "coverage": "SOLIDITY_COVERAGE=true hardhat coverage"
   },
   "dependencies": {
-    "@openzeppelin/confidential-contracts": "^0.5.1"
+    "@openzeppelin/confidential-contracts": "^0.5.3"
   },
   "devDependencies": {
     "hardhat": "^2.29.0",
